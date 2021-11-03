@@ -20,7 +20,7 @@ RUN yum -y install epel-release; \
 RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.rpm -O /tmp/jdk-8u73-linux-x64.rpm; \
     yum -y install /tmp/jdk-8u73-linux-x64.rpm; \
     export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/java; \
-    export JAVACMD=`which java;
+    export JAVACMD=`which java`;
 
 #download and install elasticsearch_v2.3.1
 RUN wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.3.1/elasticsearch-2.3.1.rpm -O /tmp/elasticsearch-2.3.1.rpm; \
